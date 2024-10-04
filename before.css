@@ -1,0 +1,95 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+.heart{
+    height: 70px;
+    width: 70px;
+    background-color: rgb(15, 15, 15);
+    transform: rotate(-45deg);
+    animation: jyo 2s infinite;
+    position: relative;
+    left: 27%;
+    z-index: 7;
+}
+.heart::before{
+    height: 70px;
+    width: 70px;
+    background-color: rgb(7, 2, 2);
+    top: -50%;
+    position: absolute;
+    border-radius: 50px;
+    content: "";
+    z-index: 7;
+}
+.heart::after{
+    height: 70px;
+    width: 70px;
+    background-color: rgb(10, 9, 9);
+    right: -50%;
+    position: absolute;
+    border-radius: 50px;
+    content: "";
+    z-index: 7;
+}
+@keyframes jyo{
+  0%{
+      transform: rotate(-45deg) scale(1.09);
+  }
+  50%{
+    transform: rotate(-45deg) scale(1.0);
+
+  }
+  100%{
+    transform: rotate(-45deg) scale(1.02);
+
+  }
+}
+.circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    animation: jyo2 3s linear infinite;
+    border: 2px solid rgb(4, 4, 4);
+    position: relative;
+    left: 15%;
+    z-index: 5;
+
+}
+@keyframes jyo2{
+    from{
+        transform: rotate(0);
+        background-color: chartreuse;
+    }
+    to{
+        transform: rotate(360);
+        background-color: rgb(242, 242, 1);
+    }
+}
+.square{
+    height: 500px;
+    width: 500px;
+    animation: jyo3 3s linear infinite;
+    border: 2px solid rgb(3, 66, 175);
+    position: relative;
+    right: 12%;
+}
+@keyframes jyo3{
+    from{
+        transform: rotate(0deg);
+        background-color: rgb(12, 246, 195);
+    }
+    to{
+        transform: rotate(360deg);
+        background-color: blueviolet;
+    }
+}
